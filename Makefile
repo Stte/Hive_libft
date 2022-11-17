@@ -38,10 +38,6 @@ $(NAME): $(SRCS)
 	ar rc $(NAME) $(OBJS)
 	ranlib  $(NAME)
 
-bonus: $(BNS_SRCS)
-	cc $(FLAGS) -c $(BNS_SRCS)
-	ar rus $(NAME) $(BNS_OBJS)
-
 clean:
 	rm -f $(OBJS) $(BNS_OBJS)
 
@@ -50,14 +46,15 @@ fclean: clean
 
 re: fclean all
 
+bonus: $(BNS_SRCS)
+	cc $(FLAGS) -c $(BNS_SRCS)
+	ar rc $(NAME) $(BNS_OBJS)
+	ranlib  $(NAME)
+
 so:
 	gcc $(FLAGS) -c $(SRCS) $(BNS_SRCS)
 	gcc -shared -o $(NAME:.a=.so) $(OBJS) $(BNS_OBJS)
 
-test:
-	cc $(FLAGS) -g -c $(SRCS)
-	ar rc $(NAME) $(OBJS)
-	ranlib  $(NAME)
+test: all
 	gcc -g $(FLAGS) $(TESTS) -L. -lft
 	./a.out
-
