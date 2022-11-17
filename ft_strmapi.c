@@ -6,7 +6,7 @@
 /*   By: tspoof <tspoof@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 23:18:45 by tspoof            #+#    #+#             */
-/*   Updated: 2022/11/07 18:55:39 by tspoof           ###   ########.fr       */
+/*   Updated: 2022/11/09 18:58:27 by tspoof           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	str[i] = '\0';
-
 	return (str);
 }

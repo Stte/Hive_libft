@@ -6,7 +6,7 @@
 /*   By: tspoof <tspoof@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 15:50:56 by tspoof            #+#    #+#             */
-/*   Updated: 2022/11/07 17:54:12 by tspoof           ###   ########.fr       */
+/*   Updated: 2022/11/09 18:58:18 by tspoof           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_free_all(char **arr)
 int	ft_split_count(const char *s, char c)
 {
 	int	i;
-	int count;
+	int	count;
 
 	i = 0;
 	count = 0;
@@ -79,7 +79,7 @@ char	**ft_split(char const *s, char c)
 	arr = (char **)ft_calloc(split_count + 1, sizeof(char *));
 	if (!arr)
 		return (NULL);
-	if(!ft_splitter(s, c, arr, split_count))
+	if (!ft_splitter(s, c, arr, split_count))
 	{
 		free(arr);
 		return (NULL);

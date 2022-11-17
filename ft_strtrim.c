@@ -6,7 +6,7 @@
 /*   By: tspoof <tspoof@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 14:05:22 by tspoof            #+#    #+#             */
-/*   Updated: 2022/11/07 18:54:18 by tspoof           ###   ########.fr       */
+/*   Updated: 2022/11/09 18:58:39 by tspoof           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
-
 	start_idx = 0;
 	end_idx = ft_strlen(s1);
 	while (ft_strchr(set, s1[start_idx]) && start_idx < end_idx)

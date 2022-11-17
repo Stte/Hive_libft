@@ -6,13 +6,11 @@
 /*   By: tspoof <tspoof@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 18:54:42 by tspoof            #+#    #+#             */
-/*   Updated: 2022/11/05 21:50:20 by tspoof           ###   ########.fr       */
+/*   Updated: 2022/11/09 18:56:52 by tspoof           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-
 
 int	ft_itoa_size(long num)
 {
@@ -51,7 +49,7 @@ char	*ft_itoa_rec(long num, int sign, char *str)
 			i++;
 		}
 	}
-	if(str)
+	if (str)
 		str[i - current_i] = num % 10 + '0';
 	return (str);
 }

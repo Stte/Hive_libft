@@ -6,7 +6,7 @@
 /*   By: tspoof <tspoof@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 14:06:00 by tspoof            #+#    #+#             */
-/*   Updated: 2022/10/31 14:39:55 by tspoof           ###   ########.fr       */
+/*   Updated: 2022/11/15 12:25:52 by tspoof           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	slen;
 	size_t	i;
 
-	slen = ft_strlen(s) + 1;
 	i = 0;
-	while (i < slen && i < n)
+	while (i < n)
 	{
 		if (*(unsigned char *)(s + i) == (unsigned char)c)
 		{

@@ -6,23 +6,21 @@
 /*   By: tspoof <tspoof@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 14:09:24 by tspoof            #+#    #+#             */
-/*   Updated: 2022/11/07 16:14:00 by tspoof           ###   ########.fr       */
+/*   Updated: 2022/11/09 20:09:03 by tspoof           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stdlib.h>
-# include <fcntl.h>
 # include <unistd.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
-	void	*content;
-	struct	s_list *next;
-}				t_list;
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

@@ -6,7 +6,7 @@
 /*   By: tspoof <tspoof@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:31:28 by tspoof            #+#    #+#             */
-/*   Updated: 2022/11/07 13:45:34 by tspoof           ###   ########.fr       */
+/*   Updated: 2022/11/16 12:58:06 by tspoof           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
 
+	if (!lst)
+		return ;
 	if (!(*lst))
 	{
 		*lst = new;
@@ -25,5 +27,4 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	while (tmp->next)
 		tmp = tmp->next;
 	tmp->next = new;
-
 }

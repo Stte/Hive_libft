@@ -6,7 +6,7 @@
 /*   By: tspoof <tspoof@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 15:32:39 by tspoof            #+#    #+#             */
-/*   Updated: 2022/11/06 18:27:58 by tspoof           ###   ########.fr       */
+/*   Updated: 2022/11/16 12:55:54 by tspoof           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,7 @@ t_list	*ft_lstnew(void *content)
 	lst = (t_list *)malloc(sizeof(t_list));
 	if (!lst)
 		return (NULL);
-	if (!content)
-		lst->content = NULL;
-	else
-		lst->content = content;
+	lst->content = content;
 	lst->next = NULL;
 	return (lst);
 }
